@@ -9,3 +9,17 @@ img {
 	background: url("../images/backgrounds/h_img.jpg") fixed center no-repeat;
 	background-size: cover;
 }
+
+#welcome-message {
+	color: white;
+}
+
+#about-us {
+
+}
+
+#services {
+	height: 600px;
+	background: url("../images/backgrounds/s_image.jpg") fixed left no-repeat;
+	color: white;
+}
