@@ -115,8 +115,8 @@ img {
 }
 
 #bailey-wonger #card-overlay {
-	background: #00000090;
-	width: 100%;
+	background: rgba(0, 0, 0, .8);
+	width: 101%;
 	height: 100%;
 }
 
@@ -139,7 +139,47 @@ img {
 #contacts {
 	background: url("../images/backgrounds/c_image.jpg") left no-repeat;
 	background-size: cover;
-	height: 60vh;
+	height: 70vh;
+	color: white;
+	text-align: center;
+	padding: 30px;
+}
+
+#contacts h2 {
+	margin: 20px auto 20px auto;
+}
+
+#contact-top {
+	margin-bottom: 20px;
+}
+
+#contact-top input, #contact-bottom textarea {
+	background: transparent;
+	box-sizing: border-box;
+	color: white;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+::-webkit-input-placeholder {
+	color: white;
+}
+
+::placeholder {
+	color: white;
+}
+
+[type="text"], [type="email"] {
+	width: 350px;
+}
+
+textarea {
+	width: 705px;
+	height: 150px;
+}
+
+[type="text"], [type="email"], textarea {
+	border: 1px solid white;
 }
 
 #social-media {
