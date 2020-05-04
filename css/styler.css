@@ -33,3 +33,8 @@ img {
 	background-size: cover;
 	height: 60vh;
 }
+
+#social-media {
+	display: flex;
+	flex-direction: row;
+}
