@@ -27,3 +27,9 @@ img {
 #bailey-wonger {
 	background: url("../images/portfolio/work8.jpg")
 }
+
+#contacts {
+	background: url("../images/backgrounds/c_image.jpg") left no-repeat;
+	background-size: cover;
+	height: 60vh;
+}
