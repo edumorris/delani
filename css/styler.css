@@ -197,3 +197,7 @@ textarea {
 	width: 60px;
 	height: 60px;
 }
+
+#copyright-info {
+	text-align: center;
+}
