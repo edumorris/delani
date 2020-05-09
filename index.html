@@ -16,7 +16,7 @@
 	<!--Bootstrap-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -93,21 +93,53 @@
 			<div id="wwd">
 				<div id="design-wwd" class="what-we-do">
 					<figure>
-						<img src="images/services_icons/design_icon.png">
+						<img class="what-we-do" id="ds-w-d" src="images/services_icons/design_icon.png" onclick="showDesign()">
 						<figcaption>DESIGN</figcaption>
 					</figure>
 				</div>
 				<div id="development-wwd" class="what-we-do">
 					<figure>
-						<img src="images/services_icons/dev_icon.png">
+						<img class="what-we-do" id="dv-w-d" src="images/services_icons/dev_icon.png" onclick="showDevelopment()">
 						<figcaption>DEVELOPMENT</figcaption>
 					</figure>
 				</div>
 				<div id="product-management-wwd" class="what-we-do">
 					<figure>
-						<img src="images/services_icons/product_icon.png">
+						<img class="what-we-do" id="pm-w-d" src="images/services_icons/product_icon.png" onclick="showProduct()">
 						<figcaption>PRODUCT MANAGEMENT</figcaption>
 					</figure>
+				</div>
+			</div>
+			<div id="wwd-descriptions">
+				<div class="wwd-description" id="design-wwd-description">
+					<h2><span id="c-underline">Design</span></h2>
+					<p>
+						Our design practice offers a full range of services including brand strategy, interaction and visual design and user experience testing.
+					</p>
+					<p>
+						Throughout your project, our designers create and implement visual design and workflows, solicit user feedback and work with you to make sure what gets built is what is needed.
+					</p>
+					<button class="btn closeDescr" onclick="descrClose()">Close</button>
+				</div>
+				<div class="wwd-description" id="development-wwd-description">
+					<h2><span id="c-underline">Development</span></h2>
+					<p>
+						All engineers are fluent in the latest enterprise, mobile and web development technologies.
+					</p>
+					<p>
+						They collaborate with your team to write, and improve code on a daily basis, using proven practices such as test-driven development and pair programming.
+					</p>
+					<button class="btn closeDescr">Close</button>
+				</div>
+				<div class="wwd-description" id="product-management-wwd-description">
+					<h2><span id="c-underline">Product Management</span></h2>
+					<p>
+						Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live.
+					</p>
+					<p>
+						This iterative process allows for changes as business requirements evolve.
+					</p>
+					<button class="btn closeDescr">Close</button>
 				</div>
 			</div>
 		</div>
@@ -118,35 +150,47 @@
 				<h2>PORTFOLIO</h2>
 
 				<div id="portfolio-cards">
+					<script>
+						$(function() {
+							$("#work1").tooltip();
+							$("#work2").tooltip();
+							$("#work3").tooltip();
+							$("#work4").tooltip();
+							$("#work5").tooltip();
+							$("#work6").tooltip();
+							$("#work7").tooltip();
+							$(".work8").tooltip();
+						});
+					</script>
 					<div class="card">
-						<img src="images/portfolio/work4.jpg" class="card-img-top" alt="...">
+						<img id="work1" title="Work 1" src="images/portfolio/work4.jpg" class="card-img-top" alt="...">
 					</div>
 
 					<div class="card">
-						<img src="images/portfolio/work3.jpg" class="card-img-top" alt="...">
+						<img id="work2" title="Work 2" src="images/portfolio/work3.jpg" class="card-img-top" alt="...">
 					</div>
 
 					<div class="card">
-						<img src="images/portfolio/work2.jpg" class="card-img-top" alt="...">
+						<img id="work3" title="Work 3" src="images/portfolio/work2.jpg" class="card-img-top" alt="...">
 					</div>
 
 					<div class="card">
-						<img src="images/portfolio/work1.jpg" class="card-img-top" alt="...">
+						<img id="work4" title="Work 4" src="images/portfolio/work1.jpg" class="card-img-top" alt="...">
 					</div>
 
 					<div class="card">
-						<img src="images/portfolio/work5.jpg" class="card-img-top" alt="...">
+						<img id="work5" title="Work 5" src="images/portfolio/work5.jpg" class="card-img-top" alt="...">
 					</div>
 
 					<div class="card">
-						<img src="images/portfolio/work6.jpg" class="card-img-top" alt="...">
+						<img id="work6" title="Work 6" src="images/portfolio/work6.jpg" class="card-img-top" alt="...">
 					</div>
 
 					<div class="card">
-						<img src="images/portfolio/work7.jpg" class="card-img-top" alt="...">
+						<img id="work7" title="Work 7" src="images/portfolio/work7.jpg" class="card-img-top" alt="...">
 					</div>
 
-					<div class="card" id="bailey-wonger">
+					<div title="Work 8" class="card work8" id="bailey-wonger">
 						<div id="card-overlay">
 							<div id="bailey-wonger-content">
 								BAILEY<br>WONGER
@@ -163,12 +207,13 @@
 
 			<div id="contact_form">
 				<div id="contact-top">
-					<input type="text" name="name" id="user_name" placeholder="Name...">
-					<input type="email" name="e-mail" id="user_email" placeholder="Email...">
+					<input type="text" name="name" id="user_name" placeholder="Name..." required>
+					<input type="email" name="e-mail" id="user_email" placeholder="Email..." required>
 				</div>
 				<div id="contact-bottom">
-					<textarea id="user_message" rows="4" cols="50" placeholder="Your message here..."></textarea>
+					<textarea id="user_message" rows="4" cols="50" placeholder="Your message here..." required></textarea>
 				</div>
+				<div id="send-btn"><button onclick="sendMessage()">Send Message</button></div>
 			</div>
 
 		</div>

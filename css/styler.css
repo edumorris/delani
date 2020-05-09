@@ -103,9 +103,14 @@ img {
 	margin-right: 50px;
 	padding: 10px 70px 40px 70px;
 }
+
 .what-we-do figure img {
 	width: 60px;
 	height: 60px;
+}
+
+.what-we-do:hover {
+	cursor: pointer;
 }
 
 figcaption {
@@ -117,6 +122,31 @@ figcaption {
 #development-wwd {
 	padding-left: 100px;
 }
+
+#design-wwd-description, #development-wwd-description, #product-management-wwd-description {
+	display: none;
+}
+
+.wwd-description {
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+	border: 1px solid #00000030;
+	border-radius: 25px;
+	padding: 20px;
+	background-color: #f5f5f5;
+	box-shadow: 0 8px 15px -6px black;
+}
+
+.wwd-description h2 {
+	margin-bottom: 20px;
+}
+
+.wwd-description h2 #c-underline {
+	border-bottom: 2px solid black;
+	padding: 5px;
+}
+
 
 #portfolio {
 	text-align: center;
@@ -211,9 +241,32 @@ textarea {
 	height: 200px;
 }
 
+#send-btn button {
+	background-color: transparent;
+	margin-top: 30px;
+	color: white;
+	border: 1px solid white;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+#send-btn button:hover {
+	background-color: white;
+	color: black;
+}
+
+#send-btn button:active {
+	outline: none;
+}
+
+#send-btn button:focus {
+	outline: none;
+}
+
 #social-media {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	width: 70%;
 	margin: 0 auto;
 	margin-top: 40px;
@@ -231,4 +284,40 @@ textarea {
 	text-align: center;
 	margin-bottom: 10px;
 	font-size: 12px;
+}
+
+/*----------Responsive----------*/
+@media only screen and (max-width: 980px) {
+	body, html, #container {
+		overflow-x: hidden;
+	}
+
+	#development-wwd {
+		padding-left: 50px;
+		padding-right: 50px;
+		margin: 0 40px 0 40px;
+	}
+
+	[type="email"] {
+		margin-top: 10px;
+	}
+
+	textarea {
+		width: 350px;
+		margin-top: 30px;
+	}
+
+	#social-media a {
+		padding: 5px;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.card {
+		width: 300px !important;
+		height: 250px !important;
+		margin: 10px;
+	}	
 }
