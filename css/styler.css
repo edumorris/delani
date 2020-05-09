@@ -119,6 +119,31 @@ figcaption {
 	padding-left: 100px;
 }
 
+#design-wwd-description, #development-wwd-description, #product-management-wwd-description {
+	display: none;
+}
+
+.wwd-description {
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+	border: 1px solid #00000030;
+	border-radius: 25px;
+	padding: 20px;
+	background-color: #f5f5f5;
+	box-shadow: 0 8px 15px -6px black;
+}
+
+.wwd-description h2 {
+	margin-bottom: 20px;
+}
+
+.wwd-description h2 #c-underline {
+	border-bottom: 2px solid black;
+	padding: 5px;
+}
+
+
 #portfolio {
 	text-align: center;
 	margin-bottom: 40px;
