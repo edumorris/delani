@@ -109,6 +109,10 @@ img {
 	height: 60px;
 }
 
+.what-we-do:hover {
+	cursor: pointer;
+}
+
 figcaption {
 	font-family: 'Lato', sans-serif;
 	font-size: small;
@@ -235,6 +239,28 @@ figcaption {
 textarea {
 	width: 705px;
 	height: 200px;
+}
+
+#send-btn button {
+	background-color: transparent;
+	margin-top: 30px;
+	color: white;
+	border: 1px solid white;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+#send-btn button:hover {
+	background-color: white;
+	color: black;
+}
+
+#send-btn button:active {
+	outline: none;
+}
+
+#send-btn button:focus {
+	outline: none;
 }
 
 #social-media {

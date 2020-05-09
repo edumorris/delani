@@ -16,7 +16,7 @@
 	<!--Bootstrap-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -93,19 +93,19 @@
 			<div id="wwd">
 				<div id="design-wwd" class="what-we-do">
 					<figure>
-						<img src="images/services_icons/design_icon.png">
+						<img class="what-we-do" id="ds-w-d" src="images/services_icons/design_icon.png" onclick="showDesign()">
 						<figcaption>DESIGN</figcaption>
 					</figure>
 				</div>
 				<div id="development-wwd" class="what-we-do">
 					<figure>
-						<img src="images/services_icons/dev_icon.png">
+						<img class="what-we-do" id="dv-w-d" src="images/services_icons/dev_icon.png" onclick="showDevelopment()">
 						<figcaption>DEVELOPMENT</figcaption>
 					</figure>
 				</div>
 				<div id="product-management-wwd" class="what-we-do">
 					<figure>
-						<img src="images/services_icons/product_icon.png">
+						<img class="what-we-do" id="pm-w-d" src="images/services_icons/product_icon.png" onclick="showProduct()">
 						<figcaption>PRODUCT MANAGEMENT</figcaption>
 					</figure>
 				</div>
@@ -192,12 +192,13 @@
 
 			<div id="contact_form">
 				<div id="contact-top">
-					<input type="text" name="name" id="user_name" placeholder="Name...">
-					<input type="email" name="e-mail" id="user_email" placeholder="Email...">
+					<input type="text" name="name" id="user_name" placeholder="Name..." required>
+					<input type="email" name="e-mail" id="user_email" placeholder="Email..." required>
 				</div>
 				<div id="contact-bottom">
-					<textarea id="user_message" rows="4" cols="50" placeholder="Your message here..."></textarea>
+					<textarea id="user_message" rows="4" cols="50" placeholder="Your message here..." required></textarea>
 				</div>
+				<div id="send-btn"><button onclick="sendMessage()">Send Message</button></div>
 			</div>
 
 		</div>
