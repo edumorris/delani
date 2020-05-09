@@ -17,6 +17,8 @@ The final program should resemble the sample provided
 ### HTML
 ### CSS
 ### Bootstrap
+### Javascript
+### JQuery
 
 # Live URL
 [Delani Studio](https://edumorris.github.io/delani)
