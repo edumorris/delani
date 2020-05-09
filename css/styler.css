@@ -103,6 +103,7 @@ img {
 	margin-right: 50px;
 	padding: 10px 70px 40px 70px;
 }
+
 .what-we-do figure img {
 	width: 60px;
 	height: 60px;
@@ -214,6 +215,7 @@ textarea {
 #social-media {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	width: 70%;
 	margin: 0 auto;
 	margin-top: 40px;
@@ -231,4 +233,40 @@ textarea {
 	text-align: center;
 	margin-bottom: 10px;
 	font-size: 12px;
+}
+
+/*----------Responsive----------*/
+@media only screen and (max-width: 980px) {
+	body, html, #container {
+		overflow-x: hidden;
+	}
+
+	#development-wwd {
+		padding-left: 50px;
+		padding-right: 50px;
+		margin: 0 40px 0 40px;
+	}
+
+	[type="email"] {
+		margin-top: 10px;
+	}
+
+	textarea {
+		width: 350px;
+		margin-top: 30px;
+	}
+
+	#social-media a {
+		padding: 5px;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.card {
+		width: 300px !important;
+		height: 250px !important;
+		margin: 10px;
+	}	
 }
