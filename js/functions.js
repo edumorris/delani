@@ -1,4 +1,5 @@
 function showDesign() {
+	document.getElementById("wwd-descriptions").style.display = "block";
 	document.getElementById("design-wwd-description").style.display = "block";
 	document.getElementById("development-wwd-description").style.display = "none";
 	document.getElementById("product-management-wwd-description").style.display = "none";
@@ -7,12 +8,14 @@ function showDesign() {
 }
 
 function showDevelopment() {
+	document.getElementById("wwd-descriptions").style.display = "block";
 	document.getElementById("design-wwd-description").style.display = "none";
 	document.getElementById("development-wwd-description").style.display = "block";
 	document.getElementById("product-management-wwd-description").style.display = "none";
 }
 
 function showProduct() {
+	document.getElementById("wwd-descriptions").style.display = "block";
 	document.getElementById("design-wwd-description").style.display = "none";
 	document.getElementById("development-wwd-description").style.display = "none";
 	document.getElementById("product-management-wwd-description").style.display = "block";
@@ -43,4 +46,6 @@ function sendMessage() {
     return content = ["usersName", "usersEmail", "usersMessage"];
 }
 
-
+function descrClose() {
+	document.getElementById("wwd-descriptions").style.display = "none";
+}
