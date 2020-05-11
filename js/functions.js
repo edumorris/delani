@@ -56,6 +56,30 @@ function showProduct() {
 	}
 }
 
+function descrCloseDs() {
+	$('#closeBtnDs').click(function() {
+		$('#design-wwd-description').hide('slow'); 
+		$('#wwd-descriptions').hide("slow");
+	});
+	//document.getElementById("wwd-descriptions").style.display = "none";
+}
+
+function descrCloseDv() {
+	$('#closeBtnDv').click(function() {
+		$('#development-wwd-description').hide('slow');
+		$('#wwd-descriptions').hide("slow");
+	});
+	//document.getElementById("wwd-descriptions").style.display = "none";
+}
+
+function descrClosePr() {
+	$('#closeBtnPr').click(function() {
+		$('#product-management-wwd-description').hide('slow');
+		$('#wwd-descriptions').hide("slow");
+	});
+	//document.getElementById("wwd-descriptions").style.display = "none";
+}
+
 function sendMessage() {
     let usersName = document.getElementById("user_name").value;
     let usersEmail = document.getElementById("user_email").value;
@@ -79,8 +103,4 @@ function sendMessage() {
     }
 
     return content = ["usersName", "usersEmail", "usersMessage"];
-}
-
-function descrClose() {
-	document.getElementById("wwd-descriptions").style.display = "none";
 }
