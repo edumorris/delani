@@ -1,3 +1,4 @@
+/*
 function showDesign() {
 	document.getElementById("wwd-descriptions").style.display = "block";
 	document.getElementById("design-wwd-description").style.display = "block";
@@ -19,6 +20,64 @@ function showProduct() {
 	document.getElementById("design-wwd-description").style.display = "none";
 	document.getElementById("development-wwd-description").style.display = "none";
 	document.getElementById("product-management-wwd-description").style.display = "block";
+}
+*/
+
+function showDesign() {
+	if($('#design-wwd-description').css('display') == 'none') {
+		$('#wwd-descriptions').show('slow'); 
+		$('#design-wwd-description').show('slow');
+		$('#development-wwd-description').hide('slow');
+		$('#product-management-wwd-description').hide('slow');  
+	} else { 
+		$('#design-wwd-description').hide('slow'); 
+	}
+}
+
+function showDevelopment() {
+	if($('#development-wwd-description').css('display') == 'none') {
+		$('#wwd-descriptions').show('slow'); 
+		$('#development-wwd-description').show('slow');
+		$('#design-wwd-description').hide('slow');
+		$('#product-management-wwd-description').hide('slow'); 
+	} else { 
+		$('#development-wwd-description').hide('slow'); 
+	}
+}
+
+function showProduct() {
+	if($('#product-management-wwd-description').css('display') == 'none') {
+		$('#wwd-descriptions').show('slow'); 
+		$('#product-management-wwd-description').show('slow');
+		$('#development-wwd-description').hide('slow');
+		$('#design-wwd-description').hide('slow'); 
+	} else { 
+		$('#product-management-wwd-description').hide('slow'); 
+	}
+}
+
+function descrCloseDs() {
+	$('#closeBtnDs').click(function() {
+		$('#design-wwd-description').hide('slow'); 
+		$('#wwd-descriptions').hide("slow");
+	});
+	//document.getElementById("wwd-descriptions").style.display = "none";
+}
+
+function descrCloseDv() {
+	$('#closeBtnDv').click(function() {
+		$('#development-wwd-description').hide('slow');
+		$('#wwd-descriptions').hide("slow");
+	});
+	//document.getElementById("wwd-descriptions").style.display = "none";
+}
+
+function descrClosePr() {
+	$('#closeBtnPr').click(function() {
+		$('#product-management-wwd-description').hide('slow');
+		$('#wwd-descriptions').hide("slow");
+	});
+	//document.getElementById("wwd-descriptions").style.display = "none";
 }
 
 function sendMessage() {
@@ -44,8 +103,4 @@ function sendMessage() {
     }
 
     return content = ["usersName", "usersEmail", "usersMessage"];
-}
-
-function descrClose() {
-	document.getElementById("wwd-descriptions").style.display = "none";
 }
