@@ -3,6 +3,8 @@
 
 # Project Description
 Replication of an existing project
+## Live URL
+[Delani Studio](https://edumorris.github.io/delani)
 
 # Author
 ## Edwin Morris
@@ -19,9 +21,6 @@ The final program should resemble the sample provided
 ### Bootstrap
 ### Javascript
 ### JQuery
-
-# Live URL
-[Delani Studio](https://edumorris.github.io/delani)
 
 # Contact Information
 eduuwachira@gmail.com
